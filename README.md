@@ -9,7 +9,9 @@ Everything is locally in game, nothing is sent online to any server or anything.
 Install guide:
 
 1 - Install an appropriate version of Python3 (Tested on Python3.11.10). https://python.org/downloads A restart may be necessary of your computer after.
+
 2 - Come into this folder in terminal/windows powershell and run "pip install -r requirements.txt". This will install the necessary frameworks for the chess to work.
+
 3 - Come into this folder any time now in terminal/windows powershell and to start the game simply type "Chess<OSVERSION>.py" where <OSVERSION> is Linux, Mac, or Windows.
 
 How to play:
