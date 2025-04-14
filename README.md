@@ -22,7 +22,6 @@ I wish you the best of luck!
 
 - Blake Burns
  The creator of this chess game
-
            /^\/^\
          _|__|  O|
 \/     /~     \_/ \
