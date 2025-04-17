@@ -190,7 +190,7 @@ def highlight_squares(surface, square_size):
                 surface.blit(highlight_surface_move, to_pos)
 
 
-def draw_info_panel(surface, text, turn_is_white, panel_rect, last_move):
+def draw_info_panel(surface, text, turn_is_white, panel_rect, panel_rect2, last_move):
      pygame.draw.rect(surface, (220, 220, 220), panel_rect)
 
      # Determine whose turn it is based on board state
@@ -208,7 +208,7 @@ def draw_info_panel(surface, text, turn_is_white, panel_rect, last_move):
      # Display game over text if applicable
      if text:
          info_text = info_font.render(text, True, (200, 0, 0))  # Red color for game over
-         info_rect = info_text.get_rect(center=panel_rect.center)
+         info_rect = info_text.get_rect(center=panel_rect2.center)
          surface.blit(info_text, info_rect)
 
 
@@ -659,6 +659,7 @@ while running:
         board_y = (screen_height - INFO_PANEL_HEIGHT - board_size) // 2 # Center board vertically above info panel
         board_origin = (board_x, board_y)
         info_panel_rect = pygame.Rect(0, board_y + board_size, screen_width, INFO_PANEL_HEIGHT)
+        info_panel_rect2 = pygame.Rect(0, board_size, screen_width, INFO_PANEL_HEIGHT)
         restart_button_rect = pygame.Rect((screen_width - BUTTON_WIDTH) // 2, screen_height - BUTTON_HEIGHT - BUTTON_MARGIN, BUTTON_WIDTH, BUTTON_HEIGHT)
         quit_button_rect = pygame.Rect(screen_width - BUTTON_WIDTH - BUTTON_MARGIN, screen_height - BUTTON_HEIGHT - BUTTON_MARGIN, BUTTON_WIDTH, BUTTON_HEIGHT)
 
@@ -673,7 +674,7 @@ while running:
         # Draw pieces at the calculated board_origin
         draw_pieces(screen.subsurface((board_origin[0], board_origin[1], board_size, board_size)), board, INITIAL_SQUARE_SIZE, animating, animation_piece, animation_start_pos, animation_end_pos)
 
-        draw_info_panel(screen, game_over_text, is_player_move, info_panel_rect, last_player_move if 'last_player_move' in locals() else None)
+        draw_info_panel(screen, game_over_text, is_player_move, info_panel_rect, info_panel_rect2, last_player_move if 'last_player_move' in locals() else None)
 
         if promotion_move and is_player_move and not animating:
             draw_promotion_panel(screen, board_origin, INITIAL_SQUARE_SIZE)
