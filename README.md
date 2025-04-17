@@ -12,11 +12,11 @@ Install guide:
 
 2 - Come into this folder in terminal/windows powershell and run "pip install -r requirements.txt". This will install the necessary frameworks for the chess to work.
 
-3 - Come into this folder any time now in terminal/windows powershell and to start the game simply type "Chess<OSVERSION>.py" where <OSVERSION> is Linux, Mac, or Windows.
+3 - Come into this folder any time now in terminal/windows powershell and to start the game simply type "Chess`OSVERSION`.py" where `OSVERSION` is Linux, Mac, or Windows.
 
 How to play:
 
-After installation, using terminal or windows powershell (depends on the type of your PC), simply type "python Chess<OSVERSION>.py" in this directory, it will open up the game.
+After installation, using terminal or windows powershell (depends on the type of your PC), simply type "python Chess`OSVERSION`.py" in this directory, it will open up the game.
 
 The terminal/powershell window will contain a full move list for those that are enthusiasts, you can see that as you play.
 
